@@ -1,5 +1,5 @@
 import styles from "./Banner.module.css";
-const Banner = () => {
+const Slider = () => {
   return (
     <div className={styles.banner_container}>
       <div className="w-full h-full flex justify-center items-center ">
@@ -20,4 +20,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Slider;

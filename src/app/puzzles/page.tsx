@@ -1,14 +1,13 @@
 "use client";
 
-import BlogCard from "@/components/ui/PuzzleCard";
+import PuzzleCard from "@/components/ui/PuzzleCard";
 import { useGetPuzzlesQuery } from "@/redux/api/baseApi";
 import { Puzzle } from "@/types";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Puzzles Page",
-  description: "Welcome to puzzle platform!",
-};
+// export const metadata: Metadata = {
+//   title: "Puzzles Page",
+//   description: "Welcome to puzzle platform!",
+// };
 
 const PuzzlesPage = () => {
   // const res = await fetch("http://localhost:5000/blogs", {
@@ -33,7 +32,7 @@ const PuzzlesPage = () => {
 
       <div className="grid grid-cols-3 gap-4 my-5">
         {blogs?.map((blog: Puzzle) => (
-          <BlogCard key={blog.id} blog={blog} />
+          <PuzzleCard key={blog.id} blog={blog} />
         ))}
       </div>
     </div>

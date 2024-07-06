@@ -4,7 +4,7 @@ import Link from "next/link";
 import { AiFillLike } from "react-icons/ai";
 import { FaCalendar } from "react-icons/fa";
 
-const BlogCard = ({ blog }: { blog: Puzzle }) => {
+const PuzzleCard = ({ blog }: { blog: Puzzle }) => {
   return (
     <div className="card w-full bg-base-100 shadow-xl">
       <figure>
@@ -57,4 +57,4 @@ const BlogCard = ({ blog }: { blog: Puzzle }) => {
   );
 };
 
-export default BlogCard;
+export default PuzzleCard;
