@@ -1,0 +1,74 @@
+{
+  "puzzles": [
+    {
+      "id": 1,
+      "title": "Personal Finance Basics",
+      "details": "An introduction to personal finance, covering budgeting, saving, and investing.",
+      "download_pdf": "https://example.com/personal_finance_basics.pdf",
+      "image": "https://example.com/images/personal_finance_basics.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Advanced Investing Strategies",
+      "details": "A guide to advanced investment techniques, including options, futures, and derivatives.",
+      "download_pdf": "https://example.com/advanced_investing_strategies.pdf",
+      "image": "https://example.com/images/advanced_investing_strategies.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Retirement Planning",
+      "details": "Essential strategies for planning and saving for retirement.",
+      "download_pdf": "https://example.com/retirement_planning.pdf",
+      "image": "https://example.com/images/retirement_planning.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Debt Management",
+      "details": "Techniques for managing and reducing debt effectively.",
+      "download_pdf": "https://example.com/debt_management.pdf",
+      "image": "https://example.com/images/debt_management.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Real Estate Investing",
+      "details": "A comprehensive guide to investing in real estate, from rental properties to REITs.",
+      "download_pdf": "https://example.com/real_estate_investing.pdf",
+      "image": "https://example.com/images/real_estate_investing.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Tax Optimization Strategies",
+      "details": "Ways to optimize your tax situation and minimize your tax liability.",
+      "download_pdf": "https://example.com/tax_optimization_strategies.pdf",
+      "image": "https://example.com/images/tax_optimization_strategies.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Insurance Planning",
+      "details": "An overview of different types of insurance and how to choose the right coverage.",
+      "download_pdf": "https://example.com/insurance_planning.pdf",
+      "image": "https://example.com/images/insurance_planning.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Creating a Will and Trust",
+      "details": "Guidance on creating a will and trust to manage your estate.",
+      "download_pdf": "https://example.com/creating_a_will_and_trust.pdf",
+      "image": "https://example.com/images/creating_a_will_and_trust.jpg"
+    },
+    {
+      "id": 9,
+      "title": "College Savings Plans",
+      "details": "Information on different college savings plans, including 529 plans and Coverdell accounts.",
+      "download_pdf": "https://example.com/college_savings_plans.pdf",
+      "image": "https://example.com/images/college_savings_plans.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Financial Independence and Early Retirement",
+      "details": "Strategies for achieving financial independence and retiring early (FIRE).",
+      "download_pdf": "https://example.com/financial_independence_early_retirement.pdf",
+      "image": "https://example.com/images/financial_independence_early_retirement.jpg"
+    }
+  ]
+}
