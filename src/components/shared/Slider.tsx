@@ -1,23 +1,38 @@
-import styles from "./Banner.module.css";
-const Slider = () => {
-  return (
-    <div className={styles.banner_container}>
-      <div className="w-full h-full flex justify-center items-center ">
-        <div className="w-[60%] h-[60%] rounded-xl text-center bg-white px-16 py-20">
-          <p className="w-40 mx-auto rounded-full p-2 my-5 bg-cyan-100 text-accent">
-            29 January 2024
-          </p>
-          <h1 className="text-4xl">The Rise of Quantum Computing</h1>
-          <p className="text-gray-400 mt-3 w-3/4 mx-auto">
-            <i>
-              Dive into the fascinating world of quantum computing, where
-              unlocking unprecedented computational power.
-            </i>
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
+"use client";
+import { motion } from "framer-motion";
+import React from "react";
+import { ImagesSlider } from "../ui/images-slider";
 
-export default Slider;
+export function Slider() {
+  const images = [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQapbg9c84GBllTbfc3ytSi3FpGz77k008N-v0QAT9qDOCgamtcUmyA8P-HlWgihiMwaTM&usqp=CAU",
+    "https://us.123rf.com/450wm/seamartini/seamartini2205/seamartini220500392/185801706-fantastic-galaxy-space-planets-for-word-search-puzzle-game-vector-worksheet-kids-education-quiz.jpg?ver=6",
+    "https://st2.depositphotos.com/2757500/10600/v/450/depositphotos_106006430-stock-illustration-educational-game-for-kids-word.jpg",
+  ];
+  return (
+    <ImagesSlider className="h-[40rem]" images={images}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: -80,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+        }}
+        transition={{
+          duration: 0.6,
+        }}
+        className="z-50 flex flex-col justify-center items-center"
+      >
+        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+          Welcome to <br /> The Puzzle-Platform
+        </motion.p>
+        <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+          <span>Join now →</span>
+          <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
+        </button>
+      </motion.div>
+    </ImagesSlider>
+  );
+}

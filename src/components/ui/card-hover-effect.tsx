@@ -10,24 +10,26 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    description: string;
-    link: string;
+    details: string;
+    download_pdf: string;
   }[];
   className?: string;
 }) => {
+  const truncateText = (text: string, length: number) => {
+    return text.length > length ? text.substring(0, length) + "..." : text;
+  };
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10 ",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
         className
       )}
     >
-      {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
+      {items.slice(0, 3).map((item, idx) => (
+        <div
+          key={item?.download_pdf}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -35,7 +37,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-neutral-200 bg-red-600/[0.8] block  rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -49,11 +51,21 @@ export const HoverEffect = ({
               />
             )}
           </AnimatePresence>
-          <Card>
-            <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+          <Card className="bg-white">
+            <CardTitle className="text-3xl text-black">
+              {truncateText(item.title, 20)}
+            </CardTitle>
+            <CardDescription className="text-xl text-black">
+              {truncateText(item.details, 30)}
+            </CardDescription>
+
+            <div className="justify-start place-items-start mt-10">
+              <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-xl p-4">
+                <Link href="/">See More</Link>
+              </button>
+            </div>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
