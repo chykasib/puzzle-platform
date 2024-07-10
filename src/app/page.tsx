@@ -1,4 +1,4 @@
-import { LatestPuzzles } from "@/components/ui/LatestPuzzles";
+import { PuzzleCard } from "@/components/ui/PuzzleCard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ const HomePage = async () => {
         Download the Free Maze
       </h1>
       <div>
-        <LatestPuzzles puzzles={puzzles} />
+        <PuzzleCard puzzles={puzzles} />
       </div>
     </div>
   );

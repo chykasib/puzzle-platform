@@ -13,7 +13,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "puzzles",
-  description: "Welcome to puzzle platform!",
+  description: "Welcome to GigglePuzzles!",
 };
 
 export default function RootLayout({

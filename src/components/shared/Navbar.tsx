@@ -39,7 +39,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Puzzle-Platform</a>
+        <Link href={"/"} className="btn btn-ghost text-xl">
+          GigglePuzzles
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-xl px-1">
