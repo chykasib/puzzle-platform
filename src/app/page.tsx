@@ -1,5 +1,6 @@
 import AnimationData from "@/components/ui/AnimationData";
 import { PuzzleCard } from "@/components/ui/PuzzleCard";
+import { Review } from "@/components/ui/Review";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,9 +30,10 @@ const HomePage = async () => {
         </div>
       </div>
       <div>
-        <h1 className=" text-yellow-200 text-5xl text-center mx-auto my-7 font-semibold lg:flex-none">
-          Download the Free WordSearch Coming Soon
+        <h1 className=" text-yellow-200 text-5xl text-center mx-auto mt-7 font-semibold lg:flex-none">
+          Our Customer Reviews
         </h1>
+        <Review />
       </div>
     </div>
   );
