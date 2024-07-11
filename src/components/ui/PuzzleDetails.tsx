@@ -1,22 +1,33 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
+import { AuroraBackground } from "../ui/aurora-background";
 import { Puzzle } from "@/types";
 
 export function PuzzleDetails({ puzzle }: { puzzle: Puzzle }) {
   return (
-    <div className="card sm:flex-none  lg:card-side h-auto w-auto bg-base-100 shadow-xl my-10 mx-10 ">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-          alt="Album"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">{puzzle.title}</h2>
-        <p>{puzzle.details}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Listen</button>
+    <AuroraBackground>
+      <motion.div
+        initial={{ opacity: 0.0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.3,
+          duration: 0.8,
+          ease: "easeInOut",
+        }}
+        className="relative flex flex-col gap-4 items-center justify-center px-4"
+      >
+        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
+          {puzzle.title}
         </div>
-      </div>
-    </div>
+        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
+          {puzzle.details}
+        </div>
+        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
+          Download
+        </button>
+      </motion.div>
+    </AuroraBackground>
   );
 }

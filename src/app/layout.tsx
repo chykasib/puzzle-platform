@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import Providers from "@/lib/Providers";
+import Navbar from "@/components/shared/Navbar";
 
 const roboto = Roboto({
   weight: "400",
@@ -12,7 +12,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "puzzles",
+  title: "puzzles Page",
   description: "Welcome to GigglePuzzles!",
 };
 
@@ -25,7 +25,7 @@ export default function RootLayout({
     <Providers>
       <html lang="en" data-theme="light">
         <body className={roboto.className}>
-          <Header />
+          <Navbar />
           <div className="min-h-screen">{children}</div>
           <Footer />
         </body>

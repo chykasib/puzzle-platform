@@ -1,3 +1,4 @@
+import { Slider } from "@/components/shared/Slider";
 import AnimationData from "@/components/ui/AnimationData";
 import { PuzzleCard } from "@/components/ui/PuzzleCard";
 import { Review } from "@/components/ui/Review";
@@ -18,6 +19,7 @@ const HomePage = async () => {
   console.log(puzzles);
   return (
     <div>
+      <Slider />
       <div>
         <AnimationData />
       </div>

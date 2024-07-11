@@ -1,39 +1,24 @@
 "use client";
-
-import PuzzleCard from "@/components/ui/PuzzleCard";
+import { MazeCard } from "@/components/ui/MazeCard";
 import { useGetPuzzlesQuery } from "@/redux/api/baseApi";
-import { Puzzle } from "@/types";
 
 // export const metadata: Metadata = {
 //   title: "Puzzles Page",
-//   description: "Welcome to puzzle platform!",
+//   description:
+//     "This a puzzle section here contain three parts maze, wordSearch, sudoku etc",
 // };
 
 const PuzzlesPage = () => {
-  // const res = await fetch("http://localhost:5000/blogs", {
-  //   cache: "no-store",
-  // });
-  // const blogs = await res.json();
-
-  const { data: blogs, isLoading, isError, error } = useGetPuzzlesQuery("");
-  // console.log(blogs);
+  const { data: puzzles, isLoading, isError, error } = useGetPuzzlesQuery("");
+  console.log(puzzles);
 
   return (
     <div className="w-[90%] mx-auto">
-      <h1 className="text-4xl text-center my-5">
-        All Blogs From <span className="text-accent">Blogiz</span>
+      <h1 className=" text-yellow-200 text-5xl text-center mx-auto my-7 font-semibold lg:flex-none">
+        Enjoy the Maze And Download the Free Maze
       </h1>
-      <p className="text-xl text-center text-gray-400 w-2/4 mx-auto">
-        <i>
-          Dive into the fascinating world of quantum computing, where unlocking
-          unprecedented computational power.
-        </i>
-      </p>
-
-      <div className="grid grid-cols-3 gap-4 my-5">
-        {blogs?.map((blog: Puzzle) => (
-          <PuzzleCard key={blog.id} blog={blog} />
-        ))}
+      <div>
+        <MazeCard puzzles={puzzles} />
       </div>
     </div>
   );
